@@ -18,8 +18,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "E-Commerce App",
-  description: "Secure Next.js Authentication System",
+  title: "Alshrqawy Store",
+  description: "Modern E-Commerce Platform",
+  icons: {
+    icon: "/icons.png",
+  },
 };
 
 export default function RootLayout({
@@ -40,16 +43,16 @@ export default function RootLayout({
         <AuthProvider>
           <Navbar />
           <main className="flex-grow flex flex-col">{children}</main>
-          <Toaster 
-            position="bottom-right" 
-            toastOptions={{ 
+          <Toaster
+            position="bottom-right"
+            toastOptions={{
               duration: 5000,
               style: {
                 background: '#333',
                 color: '#fff',
                 borderRadius: '8px',
               }
-            }} 
+            }}
           />
         </AuthProvider>
       </body>
